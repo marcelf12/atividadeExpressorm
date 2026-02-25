@@ -1,6 +1,6 @@
 # CRUD Usuário com Prisma
 Projeto feito para a atividade de ORM em APIs Backend.
-Foi utilizado Node.js com Express e Prisma ORM para criar um CRUD de Usuário com Perfil.
+Foi utilizado Node.js com Express e Prisma ORM para criar um CRUD de Usuario com perfil
 ## Tecnologias
 - Node.js
 - Express
