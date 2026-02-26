@@ -1,41 +1,58 @@
-# CRUD Usuário com Prisma
-Projeto feito para a atividade de ORM em APIs Backend.
-Foi utilizado Node.js com Express e Prisma ORM para criar um CRUD de Usuario com perfil
-## Tecnologias
-- Node.js
-- Express
-- Prisma ORM
+# Atividade: CRUD Express com Prisma ORM
 
-## Estrutura
-Usuário:
-- id
-- nome
-- email
+Este projeto é um sistema de gerenciamento de usuários e perfis desenvolvido como atividade acadêmica para a disciplina de Engenharia de Software. O foco principal é a implementação de um relacionamento **1:1** e a persistência de dados utilizando o **Prisma 6**.
 
-Perfil:
-- id
-- nome
-Relacionamento de 1:1 entre Usuário e Perfil
-## Funcionalidades
-a) Criar usuário junto com perfil  
-b) Listar usuários com perfil  
-c) Atualizar usuário e perfil  
-d) Deletar usuário e perfil  
-Não permite email duplicado.
-## Como rodar
-1) instalar dependências                                
-2) gerar prisma
-3) rodar as migrations                     
-4) iniciar a API
+---
 
-# node index.js: 
+## Enunciado & Regras de Negócio
 
-A API roda em:
-http://localhost:3000
-## Endpoints
-- POST /usuarios
-- GET /usuarios
-- PUT /usuarios/:id
-- DELETE /usuarios/:id
+O sistema foi construído seguindo rigorosamente os seguintes requisitos:
 
-testes feitos no Postman
+* **Modelagem de Dados**:
+    * **Usuário**: `id`, `nome`, `email`, `senha` e `id_perfil`.
+    * **Perfil**: `id` e `perfil_nome`.
+* **Relacionamento 1:1**: Cada usuário está vinculado a exatamente um perfil.
+* **Criação Simultânea**: Ao cadastrar um usuário, o sistema permite criar o perfil vinculado na mesma operação.
+* **Validação de Dados**: Não é permitido o cadastro de e-mails duplicados.
+* **Listagem Relacional**: A consulta de usuários retorna os dados completos do perfil associado através do ORM.
+
+---
+
+## Tecnologias Utilizadas
+
+* **Runtime**: [Node.js](https://nodejs.org/)
+* **Framework**: [Express.js](https://expressjs.com/)
+* **ORM**: [Prisma 6](https://www.prisma.io/)
+* **Banco de Dados**: [SQLite](https://www.sqlite.org/) (Arquivo local `dev.db`)
+* **Testes**: [Postman](https://www.postman.com/)
+
+---
+
+## Como Instalar e Rodar
+
+Siga os passos abaixo para executar o projeto localmente:
+
+1. **Clone o repositório**:
+   ```bash
+   git clone [https://github.com/marcelf12/atividadeExpressorm.git](https://github.com/marcelf12/atividadeExpressorm.git)
+      
+2. **Instale as dependências**:
+    ```bash
+    npm install
+
+3. **Configure o banco de dados**:
+Rode o comando abaixo para criar as tabelas no SQLite e gerar o Prisma Client:
+    ```bash
+    npx prisma db push
+
+4. **Inicie o servidor**:
+    ```bash
+    node index.js
+    
+**O servidor estará rodando em: http://localhost:3000**
+
+## Documentação da API (Endpoints)
+1. **POST /usuarios**
+2. **GET /usuarios**
+3. **PUT /usuarios/:id**
+4. **DELETE /usuarios/:id**
