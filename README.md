@@ -4,7 +4,15 @@ Este projeto é um sistema de gerenciamento de usuários e perfis desenvolvido c
 
 ---
 
-## Enunciado & Regras de Negócio
+## Tecnologias Utilizadas
+
+* **Runtime**: [Node.js](https://nodejs.org/)
+* **Framework**: [Express.js](https://expressjs.com/)
+* **ORM**: [Prisma 6](https://www.prisma.io/)
+* **Banco de Dados**: [SQLite](https://www.sqlite.org/) (Arquivo local `dev.db`)
+* **Testes**: [Postman](https://www.postman.com/)
+
+## Requisitos Implementados
 
 O sistema foi construído seguindo rigorosamente os seguintes requisitos:
 
@@ -18,17 +26,7 @@ O sistema foi construído seguindo rigorosamente os seguintes requisitos:
 
 ---
 
-## Tecnologias Utilizadas
-
-* **Runtime**: [Node.js](https://nodejs.org/)
-* **Framework**: [Express.js](https://expressjs.com/)
-* **ORM**: [Prisma 6](https://www.prisma.io/)
-* **Banco de Dados**: [SQLite](https://www.sqlite.org/) (Arquivo local `dev.db`)
-* **Testes**: [Postman](https://www.postman.com/)
-
----
-
-## Como Instalar e Rodar
+## Como Executar e Testar o Projeto
 
 Siga os passos abaixo para executar o projeto localmente:
 
